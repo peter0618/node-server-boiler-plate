@@ -22,6 +22,10 @@ mongoose.connect(config.mongoURI, {
 
 app.get('/', (req, res) => res.send('hello world'));
 
+app.get('/api/hello', (req, res) => {
+    res.send("안녕하세요~");
+});
+
 app.post('/register', (req, res) => {
 
     const user = new User(req.body);
